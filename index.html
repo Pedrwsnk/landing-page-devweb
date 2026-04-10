@@ -1,23 +1,26 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Landing Page - Viagens</title>
+    <title>Landing Page - Viagens - Fidelidade Visual</title>
   </head>
   <body>
-    <div class="container">
-      <header>
+    <div class="container-main">
+      <header class="header">
         <nav class="navbar">
           <div class="logo">Realizando Sonhos</div>
           <ul class="nav-links">
-            <li><a href="#">Nossa História</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Testemunhas</a></li>
+            <li><a href="#historia">Nossa História</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#testemunhas">Testemunhas</a></li>
             <li><a href="#" class="btn-ctt">Entre em Contato</a></li>
           </ul>
         </nav>
@@ -26,7 +29,7 @@
       <section class="pt1">
         <div class="texto-pt1">
           <h1>Viagens Incríveis</h1>
-          <h2>Uma experiência única</h2>
+          <h2>Uma experiência única.</h2>
           <p class="desc">
             Proporcionamos momentos incríveis que inspiram você a ser você.
           </p>
@@ -34,21 +37,34 @@
         </div>
       </section>
 
-      <section class="pt2">
+      <section id="historia" class="pt2">
         <div class="pt2-inner">
           <div class="pt2-titulo">
-            <h2>A primeira viagem que planejamos <strong>foi a nossa</strong></h2>
-            <p class="pt2-subtitulo">
-              Desde então, proporcionamos a melhor<br />experiência de
-              <span class="destaque-laranja">viagens para todos</span>
+            <h2>
+              A primeira viagem que planejamos
+              <span class="destaque-azul">foi a nossa</span>
+            </h2>
+            <p class="pt2-subtitulo subtitulo-historia">
+              Desde então, proporcionamos a melhor experiência de<br />
+              <span class="destaque">viagens para todos.</span>
             </p>
           </div>
+
           <div class="pt2-foto-grande">
-            <img src="imagens-da-pagina/primeira-viagem.jpg" alt="Casal de mãos dadas" />
+            <img
+              src="imagens-da-pagina/primeira-viagem.jpg"
+              alt="Casal de mãos dadas"
+              class="img-full"
+            />
           </div>
+
           <div class="pt2-conteudo">
             <div class="pt2-foto-pequena">
-              <img src="imagens-da-pagina/como-comecou.jpg" alt="Mulher viajante" />
+              <img
+                src="imagens-da-pagina/como-comecou.jpg"
+                alt="Mulher viajante"
+                class="img-float-left"
+              />
             </div>
             <div class="pt2-texto">
               <h3>Veja como tudo começou ...</h3>
@@ -56,9 +72,178 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam,
-                <a href="#" class="destaque-laranja">quis nostrud exercitation</a>
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <a href="#" class="link-orange destaque"
+                  >quis nostrud exercitation</a
+                >
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
               <p>
-                Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur
+                Duis aute irure dolor in
+                <strong class="str-txt">reprehenderit in</strong> voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+              </p>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum velit esse cillum dolore eu fugiat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="pt3">
+        <div class="pt3-inner">
+          <div class="pt3-titulo titulo-icone">
+            <img
+              src="imagens-da-pagina/icons/star.svg"
+              alt="Estrela"
+              class="icon-yellow"
+            />
+            <h2>Nossos <strong>Serviços</strong></h2>
+          </div>
+
+          <div class="pt3-grid">
+            <div class="pt3-card servico-item">
+              <img
+                src="imagens-da-pagina/icons/rain.svg"
+                alt="Chuva"
+                class="icon-yellow"
+              />
+              <div class="pt3-card-texto">
+                <h4>Veja a previsão do tempo</h4>
+                <p>
+                  Baixe nosso aplicativo e vamos enviar-lhe um aviso se está
+                  prestes a chover.
+                </p>
+              </div>
+            </div>
+            <div class="pt3-card servico-item">
+              <img
+                src="imagens-da-pagina/icons/wifi.svg"
+                alt="Wi-fi"
+                class="icon-yellow"
+              />
+              <div class="pt3-card-texto">
+                <h4>Wi-Fi Zone</h4>
+                <p>
+                  Mapeamos os locais com Wi-fi disponível para que você nunca
+                  fique desconectado.
+                </p>
+              </div>
+            </div>
+            <div class="pt3-card servico-item">
+              <img
+                src="imagens-da-pagina/icons/globe.svg"
+                alt="Globo"
+                class="icon-yellow"
+              />
+              <div class="pt3-card-texto">
+                <h4>Guia Incrível</h4>
+                <p>
+                  Percorremos todos os cantos do planeta para as melhores
+                  destinos e paisagens.
+                </p>
+              </div>
+            </div>
+            <div class="pt3-card servico-item">
+              <img
+                src="imagens-da-pagina/icons/fire.svg"
+                alt="Fogo"
+                class="icon-yellow"
+              />
+              <div class="pt3-card-texto">
+                <h4>Kit de sobrevivência</h4>
+                <p>
+                  Em cada reserva enviamos um kit de sobrevivência com materiais
+                  essenciais.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testemunhas" class="pt4">
+        <div class="pt4-inner">
+          <div class="pt4-titulo titulo-icone">
+            <img
+              src="imagens-da-pagina/icons/comment.svg"
+              alt="Balão de fala"
+              class="icone-titulo"
+            />
+            <h2><strong>Depoimentos</strong> Reais</h2>
+          </div>
+
+          <div class="pt4-cards depoimentos-flex">
+            <div class="pt4-card card-item">
+              <img
+                src="imagens-da-pagina/testemunha-renata.jpg"
+                alt="Renata Vasconcelos"
+                class="avatar"
+              />
+              <h4>Renata Vasconcelos</h4>
+              <span class="qtd-viagens">9 Viagens</span>
+              <p>
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua."
+              </p>
+            </div>
+            <div class="pt4-card card-item">
+              <img
+                src="imagens-da-pagina/testemunha-joao.jpg"
+                alt="João Pedro"
+                class="avatar"
+              />
+              <h4>João Pedro</h4>
+              <span class="qtd-viagens">4 Viagens</span>
+              <p>
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                consectetur."
+              </p>
+            </div>
+            <div class="pt4-card card-item">
+              <img
+                src="imagens-da-pagina/testemunha-cat.jpg"
+                alt="Gata Mimi"
+                class="avatar"
+              />
+              <h4>Gata Mimi</h4>
+              <span class="qtd-viagens">6 Viagens</span>
+              <p>
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <p>Copyright © 2017 Todos os direitos reservados.</p>
+          <a href="#" class="btn-footer">Entre em Contato</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+/* --- RESET E TIPOGRAFIA BASE --- */
 * {
   margin: 0;
   padding: 0;
@@ -6,199 +7,411 @@
 
 body {
   font-family: "Lato", "Arial", sans-serif;
-  font-size: 18px; /* Aumentado de 16px para 18px */
-  color: #333;
+  font-size: 16px; /* Tamanho base conforme enunciado */
   line-height: 1.6;
+  color: #333;
 }
 
-.container {
+/* PALETA DE CORES DO PDF:
+   Dourado/Amarelo: #d48e3d
+   Azul Forte (Fundo): #2c4a65
+   Azul Título/Logo: #2a3e52
+   Cinza Texto: #5a7a96 / #555
+   Branco: #fff
+*/
+
+.container-main {
   width: 100%;
+  position: relative;
 }
 
+/* Destaques de cor nos textos */
+.destaque {
+  color: #d48e3d;
+  font-weight: 700;
+}
+.destaque-azul {
+  color: #2a3e52;
+  font-weight: 700;
+}
+
+/* HEADER & NAVBAR (Fiel à imagem) */
 header {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 10;
-  background-color: rgba(42, 62, 82, 0.4);
+  z-index: 100;
+  background-color: rgba(42, 62, 82, 0.4); /* Fundo azul transparente */
 }
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 70px; /* Aumentado para acomodar logos maiores */
-  max-width: 1200px;
+  align-items: center;
+  height: 60px; /* Altura da barra */
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
+/* Logo "vazando" para baixo */
 .logo {
   background-color: #2c4a65;
   color: #fff;
-  font-size: 1.2rem; /* Aumentado */
+  font-size: 1rem;
   font-weight: 700;
-  padding: 15px 30px;
+  padding: 20px 30px;
+  height: 110px; /* Altura maior que o header */
   display: flex;
   align-items: center;
-  text-transform: uppercase;
+  position: relative;
+  top: -1px;
+  margin-left: 20px;
+  flex-shrink: 0;
+  z-index: 101;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 30px;
+  padding-right: 30px;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.1rem; /* Aumentado */
-  font-weight: 400;
-  transition: opacity 0.2s;
+  font-size: 0.95rem; /* Fonte menor e leve */
+  font-weight: 300;
+  opacity: 0.9;
 }
 
+.nav-links li a:hover {
+  opacity: 1;
+}
+
+/* Botão de contato no menu azul forte */
 .nav-links li a.btn-ctt {
-  background-color: #c9883a;
-  padding: 12px 25px;
+  background-color: #2c4a65;
+  padding: 10px 20px;
   border-radius: 4px;
+  opacity: 1;
   font-weight: 700;
+  font-size: 0.9rem;
 }
 
-/* SEÇÃO 1 - HERO */
+/* SEÇÃO 1 - HERO (Textos Leves e Brancos) */
 .pt1 {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: #1e3044 url("imagens-da-pagina/paisagem--medium.jpg") center/cover no-repeat;
+  height: 480px;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  background:
+    linear-gradient(rgba(30, 48, 68, 0.3), rgba(30, 48, 68, 0.3)),
+    url("imagens-da-pagina/paisagem--medium.jpg") bottom center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.texto-pt1 {
-  position: relative;
-  z-index: 1;
+  color: #fff;
   text-align: center;
-  color: #ffffff;
+  border-bottom: 8px solid #2c4a65;
 }
 
 .texto-pt1 h1 {
-  font-size: 4.5rem; /* Aumentado significativamente */
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: #fff;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  font-size: 3.5rem; /* Tamanho grande */
+  font-weight: 300; /* Super forte */
+  margin-bottom: 5px;
+  color: #2c4a65;
 }
 
 .texto-pt1 h2 {
-  font-size: 2.2rem; /* Aumentado */
-  font-weight: 300;
+  font-size: 1.5rem; /* Tamanho médio */
+  font-weight: 300; /* Bem leve */
   margin-bottom: 25px;
+  color: #2c4a65;
 }
 
 .texto-pt1 .desc {
-  font-size: 1.3rem; /* Aumentado */
-  max-width: 600px;
-  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  max-width: 300px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
 }
 
 .botao-laranja {
   display: inline-block;
-  background-color: #c9883a;
+  background-color: #d48e3d; /* Dourado */
   color: #fff;
   text-decoration: none;
-  padding: 18px 50px; /* Botão maior */
+  padding: 15px 40px;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
-  transition: transform 0.2s;
 }
 
-/* SEÇÃO 2 - CONTEÚDO */
+/* SEÇÃO 2 - NOSSA HISTÓRIA (Textos Coloridos e Float) */
 .pt2 {
-  padding: 100px 0;
+  padding: 90px 0;
+  background-color: #fff;
 }
 
 .pt2-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pt2-titulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Título Peso Leve e Forte com cor Azul Destaque */
+.pt2-titulo h2 {
+  font-size: 2.2rem;
+  color: #5a7a96; /* Cinza Título */
+  font-weight: 300; /* Leve */
+  margin-bottom: 10px;
+}
+
+/* Subtítulo Peso Leve e Destaque Laranja */
+.subtitulo-historia {
+  font-size: 1.25rem;
+  color: #555;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.pt2-foto-grande {
+  margin-bottom: 40px;
+}
+.pt2-foto-grande .img-full {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.pt2-conteudo {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Imagem com Float à Esquerda conforme requisito */
+.img-float-left {
+  float: left; /* Requisito */
+  width: 250px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.pt2-texto h3 {
+  font-size: 1.5rem; /* Médio */
+  color: #2a3e52; /* Azul Forte */
+  font-weight: 300; /* Leve */
+  margin-bottom: 20px;
+}
+
+.pt2-texto p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.str-txt {
+  font-weight: 900;
+}
+
+.link-orange {
+  text-decoration: underline;
+  color: #d48e3d;
+}
+
+/* SEÇÃO 3 - SERVIÇOS (Fundo Escuro, Texto Branco/Amarelo) */
+.pt3 {
+  background-color: #2c4a65;
+  padding: 90px 0;
+  color: #fff;
+}
+
+.pt3-inner {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.pt2-titulo h2 {
-  font-size: 2.5rem; /* Aumentado */
-  color: #3b5a78;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.pt2-subtitulo {
-  font-size: 1.4rem; /* Aumentado */
-  color: #c9883a;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.pt2-conteudo {
+/* Título com Ícone Alinhado */
+.titulo-icone {
   display: flex;
-  gap: 40px;
-  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 60px;
 }
 
-.pt2-texto h3 {
-  font-size: 1.8rem; /* Aumentado */
-  color: #2c4a65;
-  margin-bottom: 20px;
+.icon-yellow {
+  width: 40px;
+  filter: sepia(1) saturate(5) hue-rotate(5deg); /* Deixa ícones dourados/amarelos */
 }
 
-.pt2-texto p {
-  font-size: 1.15rem; /* Aumentado */
-  margin-bottom: 20px;
-  color: #555;
+.pt3-titulo h2 {
+  font-size: 2.2rem;
+  font-weight: 300; /* Leve */
+  color: #fff;
 }
 
-/* SEÇÃO 3 - SERVIÇOS */
-.pt3 {
-  background-color: #2e4a62;
+.pt3-titulo h2 strong {
+  font-weight: 900;
+}
+
+/* Alinhamento em Grid conforme requisito */
+.pt3-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+  gap: 40px 60px;
+}
+
+.servico-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pt3-card-texto h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.pt3-card-texto p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8); /* Branco levemente transparente */
+  line-height: 1.7;
+}
+
+/* SEÇÃO 4 - DEPOIMENTOS */
+.pt4 {
+  position: relative;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("imagens-da-pagina/testemunha-bg.jpg") center/cover;
   padding: 100px 0;
   color: #fff;
 }
 
-.pt3-titulo h2 {
-  font-size: 2.5rem;
+.pt4-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pt4-titulo h2 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #2a3e52;
+}
+
+.pt4-titulo h2 strong {
+  font-weight: 900;
+}
+
+/* Alinhamento em Flex */
+.depoimentos-flex {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.card-item {
+  background: #fff;
+  color: #333;
+  padding: 60px 20px 25px;
+  width: 250px;
   text-align: center;
+  position: relative;
+  border-radius: 4px;
 }
 
-.pt3-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-top: 60px;
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #fff;
 }
 
-.pt3-card-texto h4 {
-  font-size: 1.4rem; /* Aumentado */
+.pt4-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2a3e52; /* Azul Forte */
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.qtd-viagens {
+  font-size: 0.85rem;
+  color: #d48e3d; /* Dourado */
+  font-weight: 700;
+  display: block;
   margin-bottom: 15px;
-  color: #c9883a;
 }
 
-.pt3-card-texto p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+.pt4-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
 }
 
 /* FOOTER */
 .footer {
-  background-color: #2c4a65;
-  padding: 40px 0;
+  background: #1e3044;
+  padding: 20px 0;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #fff;
-  text-align: center;
 }
 
 .footer-inner p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.btn-footer {
+  display: inline-block;
+  background-color: #d48e3d; /* Dourado */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* DETALHES IMPORTANTES XD*/
+.botao-laranja:hover,
+.btn-footer:hover {
+  background-color: #b8762e;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a.btn-ctt:hover {
+  background-color: #1e3044;
+  transition: background-color 0.3s ease;
+}
+
+.card-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
