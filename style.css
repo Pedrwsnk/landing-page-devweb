@@ -117,15 +117,15 @@ header {
 }
 
 .texto-pt1 h1 {
-  font-size: 3.5rem; /* Tamanho grande */
-  font-weight: 300; /* Super forte */
+  font-size: 3.5rem;
+  font-weight: 300;
   margin-bottom: 5px;
   color: #2c4a65;
 }
 
 .texto-pt1 h2 {
-  font-size: 1.5rem; /* Tamanho médio */
-  font-weight: 300; /* Bem leve */
+  font-size: 1.5rem;
+  font-weight: 300;
   margin-bottom: 25px;
   color: #2c4a65;
 }
@@ -166,7 +166,6 @@ header {
   margin-bottom: 50px;
 }
 
-/* Título Peso Leve e Forte com cor Azul Destaque */
 .pt2-titulo h2 {
   font-size: 2.2rem;
   color: #5a7a96; /* Cinza Título */
@@ -174,7 +173,6 @@ header {
   margin-bottom: 10px;
 }
 
-/* Subtítulo Peso Leve e Destaque Laranja */
 .subtitulo-historia {
   font-size: 1.25rem;
   color: #555;
